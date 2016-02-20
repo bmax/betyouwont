@@ -69,3 +69,8 @@ header .intro-text .intro-lead-in{font-family:"Droid Serif","Helvetica Neue",Hel
     margin: 0 auto;
     border: thin solid lightgrey;
 }
+.modal-input {
+    width: 100px;
+    display: inline-block;
+}
+
