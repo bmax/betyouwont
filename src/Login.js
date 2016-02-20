@@ -1,5 +1,7 @@
 import React from 'react'
 import cookie from 'react-cookie';
+import $ from 'jquery';
+
 
 const url = "http://betyouwontapi.herokuapp.com"
 const routes = {
