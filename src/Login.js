@@ -1,14 +1,8 @@
 import React from 'react'
 import cookie from 'react-cookie';
 import { browserHistory } from 'react-router'
-import $ from 'jquery';
-import { authenticate } from '../src/actions'
+import { authenticate, routes } from '../src/actions'
 
-const url = "http://betyouwontapi.herokuapp.com"
-const routes = {
-  login: url + "/login",
-  signup: url + "/users/create"
-}
 export default React.createClass({
 
   getInitialState() {
