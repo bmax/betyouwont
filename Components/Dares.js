@@ -43,10 +43,10 @@ export default React.createClass({
                                 <h4 className="service-heading">{dare.dare}</h4>
                                 <p className="text-muted">{dare.description}</p>
                                 <small style={{color: 'grey'}}><span className="glyphicon glyphicon-map-marker"></span>{dare.location}</small>
-                                <h5 style={{margin: '20px'}}>${dare.total_amount}</h5>
+                                <h5 style={{margin: '20px'}}>{dare.total_amount}</h5>
                                 <p className="text-center">
-                                  <button type="button" className="btn btn-primary btn-lg btn-block home-button">Take</button>
-                                  <button type="button" className="btn btn-default btn-lg btn-block home-button">Fund</button>
+                                  <button type="button" className="btn btn-primary btn-lg btn-block home-button" data-toggle="modal" data-total_value={dare.total_amount} data-target="#takeModal">Take</button>
+                                  <button type="button" className="btn btn-default btn-lg btn-block home-button" data-target="#fundModal">Fund</button>
                                 </p>
                             </div>
                         </div> );
@@ -58,3 +58,4 @@ export default React.createClass({
   }
 }
 })
+
