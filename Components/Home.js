@@ -2,6 +2,7 @@ import React from 'react'
 import Nav from './Nav'
 import Header from './Header'
 import ListDares from './Dares'
+import Team from './Team'
 
 export default React.createClass({
   render() {
@@ -10,6 +11,7 @@ export default React.createClass({
     <Nav/>
     <Header/>
     <ListDares />
+    <Team />
     </div>
     )
   }
