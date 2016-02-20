@@ -8,12 +8,14 @@ import Welcome from './Components/Welcome'
 import Dares from './Components/Dares'
 import cookie from 'react-cookie';
 
-function authenticate (nextState, replaceState) {
+function authenticate (redirect = false, nextState, replaceState) {
   var token = cookie.load('token');
-  console.log("token", token);
-  if (!token) {
+  console.log("redirect:", redirect)
+  console.log("redirect:", nextState)
+  if (!token && redirect) {
     browserHistory.push('/#/login')
   }
+  return token;
 }
 
 render((

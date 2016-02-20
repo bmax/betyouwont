@@ -1,8 +1,18 @@
 import fetch from 'isomorphic-fetch'
+import cookie from 'react-cookie';
+import { browserHistory } from 'react-router'
 
-export const CREATE_USER = 'CREATE_USER'
-export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
-export const LOGIN_ERROR = 'LOGIN_ERROR'
+
+export function authenticate (redirect = false, nextState, replaceState) {
+  var token = cookie.load('token');
+  console.log("redirect:", redirect)
+  console.log("redirect:", nextState)
+  if (!token && redirect) {
+    browserHistory.push('/#/login')
+  }
+  return token;
+}
+
 
 const url = "http://betyouwontapi.herokuapi.com"
 const routes = {

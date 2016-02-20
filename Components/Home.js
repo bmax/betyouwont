@@ -3,6 +3,7 @@ import Nav from './Nav'
 import Header from './Header'
 import ListDares from './Dares'
 import Team from './Team'
+import { authenticate } from '../src/actions'
 
 export default React.createClass({
   render() {
@@ -10,7 +11,7 @@ export default React.createClass({
     <div>
     <Nav/>
     <Header/>
-    <ListDares />
+    <ListDares onEnter={authenticate()}/>
     <Team />
     </div>
     )

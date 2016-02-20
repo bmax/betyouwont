@@ -2,6 +2,8 @@ import React from 'react'
 
 
 export default React.createClass({
+  componentWillMount() {
+  },
   render() {
    return (
     <section id="bets">
