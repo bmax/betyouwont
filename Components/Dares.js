@@ -46,7 +46,7 @@ export default React.createClass({
                                 <h5 style={{margin: '20px'}}>{dare.total_amount}</h5>
                                 <p className="text-center">
                                   <button type="button" className="btn btn-primary btn-lg btn-block home-button" data-toggle="modal" data-total_value={dare.total_amount} data-target="#takeModal">Take</button>
-                                  <button type="button" className="btn btn-default btn-lg btn-block home-button" data-target="#fundModal">Fund</button>
+                                  <button type="button" className="btn btn-default btn-lg btn-block home-button" data-toggle="modal" data-dare_id={dare.id} data-target="#fundModal">Fund</button>
                                 </p>
                             </div>
                         </div> );

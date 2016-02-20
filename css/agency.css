@@ -70,3 +70,7 @@ header .intro-text .intro-lead-in{font-family:"Droid Serif","Helvetica Neue",Hel
     border: thin solid lightgrey;
 }
 .desc { min-height:50px; }
+.modal-input {
+    width: 100px;
+    display: inline-block;
+}

@@ -1,7 +1,10 @@
 import React from 'react'
+import { Router, Route, Link, browserHistory } from 'react-router'
+import { authenticate } from '../src/actions'
 
 export default React.createClass({
   render() {
+   var login = authenticate() ? null : <li><Link to='login'>Login</Link></li> 
    return   (
     <nav className="navbar navbar-default navbar-fixed-top">
         <div className="container">
@@ -25,9 +28,7 @@ export default React.createClass({
                     <li>
                         <a className="page-scroll" href="#idk">Create a Dare</a>
                     </li>
-                    <li>
-                        <a className="page-scroll" href="#about">About</a>
-                    </li>
+                    {login}
                     <li>
                         <a className="page-scroll" href="#team">Team</a>
                     </li>
