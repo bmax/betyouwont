@@ -23,13 +23,13 @@ export default React.createClass({
                         <a className="page-scroll" href="#bets">Dares</a>
                     </li>
                     <li>
-                        <a className="page-scroll" href="#about">Create a Dare</a>
+                        <a className="page-scroll" href="#idk">Create a Dare</a>
                     </li>
                     <li>
-                        <a className="page-scroll" href="#team">About</a>
+                        <a className="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a className="page-scroll" href="#contact">Team</a>
+                        <a className="page-scroll" href="#team">Team</a>
                     </li>
                 </ul>
             </div>

@@ -4,7 +4,7 @@ export default React.createClass({
   render() {
    return   (
     <header>
-<video autoPlay mute id="background">
+<video autoPlay muted id="background">
 <source src="dare.mp4" type="video/mp4" />
 </video>
     <div className="container">
