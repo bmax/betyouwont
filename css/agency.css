@@ -59,3 +59,13 @@ header .intro-text .intro-lead-in{font-family:"Droid Serif","Helvetica Neue",Hel
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+.home-button {
+    width:60%;
+    padding: 15px 0;
+    margin: 15px auto;
+}
+.col-restrict-80 {
+    width: 90%;
+    margin: 0 auto;
+    border: thin solid lightgrey;
+}
