@@ -2,6 +2,7 @@ import React from 'react'
 import cookie from 'react-cookie';
 import { browserHistory } from 'react-router'
 import $ from 'jquery';
+import { authenticate } from '../src/actions'
 
 const url = "http://betyouwontapi.herokuapp.com"
 const routes = {
@@ -17,10 +18,14 @@ export default React.createClass({
       message: ''
     }
     this.state = this.initialState
+    if (authenticate()) this.redirect()
     return this.state
   },
   onChange(e) {
     this.setState({ [e.target.id]: e.target.value.trim() })
+  },
+  redirect() {
+    window.location = '/'
   },
   onLogin(e) {
     e.preventDefault()
@@ -35,7 +40,7 @@ export default React.createClass({
         success: function (data) {
           console.log(data);
           cookie.save('token', data.token, { path: '/' });
-          browserHistory.push('/#/dares');
+          me.redirect()
       },
         error: function (data) { me.setState({message: "Failure! - " + data.responseJSON['error']}); },
         dataType: 'json'
@@ -52,9 +57,8 @@ export default React.createClass({
         url: routes.signup,
         data: data,
         success: function (data) {
-          me.setState({success: "Success, Created Account!"});
-          console.log(data);
           cookie.save('token', data.token, { path: '/' });
+          me.redirect();
       },
         error: function (data) { me.setState({message: "Failure! - " + data.responseJSON['error']}); },
         dataType: 'json'

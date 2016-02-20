@@ -22,7 +22,7 @@ render((
   <Router history={hashHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Home} />
-      <Route path="/login" component={Login}/>
+      <Route path="/login" component={Login} onEnter={authenticate}/>
       <Route path="/welcome" component={Welcome} />
       <Route path="/dares" component={Dares} onEnter={authenticate}/>
     </Route>

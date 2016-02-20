@@ -5,8 +5,7 @@ import { browserHistory } from 'react-router'
 
 export function authenticate (redirect = false, nextState, replaceState) {
   var token = cookie.load('token');
-  console.log("redirect:", redirect)
-  console.log("redirect:", nextState)
+  console.log("Redirecting!", redirect + " and " + token);
   if (!token && redirect) {
     browserHistory.push('/#/login')
   }
