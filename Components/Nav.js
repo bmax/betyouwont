@@ -26,10 +26,10 @@ export default React.createClass({
                         <a className="page-scroll" href="#idk">Create a Dare</a>
                     </li>
                     <li>
-                        <a className="page-scroll" href="#about">About</a>
+                        <a className="page-scroll" href="#team">Team</a>
                     </li>
                     <li>
-                        <a className="page-scroll" href="#team">Team</a>
+                        <a className="page-scroll" href="#login">Login</a>
                     </li>
                 </ul>
             </div>
