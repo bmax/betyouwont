@@ -1,0 +1,45 @@
+{
+  "name": "betyouwont",
+  "version": "1.0.0",
+  "description": "A website to place bets for people to accept instantiously",
+  "main": "main.js",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "react": "^0.14.7",
+    "react-bootstrap": "^0.28.2",
+    "react-dom": "^0.14.7",
+    "react-redux": "^4.0.6",
+    "react-router": "^2.0.0-rc5",
+    "react-router-bootstrap": "^0.20.1",
+    "redux": "^3.0.6",
+    "redux-logger": "^2.4.0",
+    "redux-thunk": "^1.0.3",
+    "webpack-dev-server": "^1.6.5"
+  },
+  "devDependencies": {
+    "webpack": "^1.12.13",
+    "react": "^0.14.7",
+    "react-router": "^2.0.0-rc5",
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-preset-react-hmre": "^1.0.1",
+    "express": "^4.13.4",
+    "gulp-webpack": "^1.5.0",
+    "path": "^0.12.7",
+    "redux-devtools": "^3.0.1",
+    "rimraf": "^2.5.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmax/betyouwont.git"
+  },
+  "author": "bmax",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmax/betyouwont/issues"
+  },
+  "homepage": "https://github.com/bmax/betyouwont#readme"
+}
