@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, IndexRoute, hashHistory } from 'react-router'
+import { Router, Route, IndexRoute, hashHistory, browserHistory } from 'react-router'
 import App from './src/App'
 import Login from './src/Login'
 import Home from './Components/Home'
@@ -12,7 +12,7 @@ function authenticate (nextState, replaceState) {
   var token = cookie.load('token');
   console.log("token", token);
   if (!token) {
-    console.log("do something");
+    browserHistory.push('/#/login')
   }
 }
 
