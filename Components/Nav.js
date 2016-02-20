@@ -4,7 +4,7 @@ import { authenticate } from '../src/actions'
 
 export default React.createClass({
   render() {
-   var login = authenticate() ? null : <li><Link to='login'>Login</Link></li> 
+   var login = authenticate() ? <li><Link to='logout'>Logout</Link></li> : <li><Link to='login'>Login</Link></li> 
    return   (
     <nav className="navbar navbar-default navbar-fixed-top">
         <div className="container">

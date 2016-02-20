@@ -49,7 +49,6 @@ export default React.createClass({
   onCreate(e) {
     e.preventDefault()
     const data = { email: this.state.email, password: this.state.password, name: this.state.name}
-    this.setState(this.initialState)
     console.log("Call API", routes.signup)
     var me = this;
     $.ajax({
