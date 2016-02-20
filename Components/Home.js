@@ -3,6 +3,7 @@ import Nav from './Nav'
 import Header from './Header'
 import ListDares from './Dares'
 import Team from './Team'
+import Modals from './Modals'
 import { authenticate } from '../src/actions'
 
 export default React.createClass({
@@ -13,6 +14,7 @@ export default React.createClass({
     <Header/>
     <ListDares onEnter={authenticate()}/>
     <Team />
+    <Modals />
     </div>
     )
   }
