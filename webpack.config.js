@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './main.js',
+  entry: './index.js',
   output: {
     filename: 'bundle.js'
   },
@@ -8,13 +8,14 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+        exclude: /node_modules/,
         query: {
           presets: ['es2015', 'react']
         }
       },
-      { test: /\.less$/, loader: 'style-loader!css-loader!less-loader' }, // use ! to chain loaders
-      { test: /\.css$/, loader: 'style-loader!css-loader' },
-      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' } // inline base64 URLs for <=8k images, direct URLs for the rest
+      { test: /\.css$/, loader: "style-loader!css-loader" },
+      { test: /\.png|.svg|.ttf|.eot|.woff2|.woff$/, loader: "url-loader?limit=100000" },
+      { test: /\.jpg$/, loader: "file-loader" }
     ]
   }
 };
