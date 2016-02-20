@@ -13,7 +13,7 @@ export function authenticate (redirect = false, nextState, replaceState) {
   var token = cookie.load('token');
   console.log("Redirecting!", redirect + " and " + token);
   if (!token && redirect) {
-    browserHistory.push('/#/login')
+    browserHistory.push('/login')
   }
   return token;
 }
