@@ -5,15 +5,45 @@ export default React.createClass({
   render() {
    return (
     <section id="bets">
-        <div className="container">
+        <div classNameName="container">
             <div className="row text-center">
                 <div className="col-md-4">
-                    <span className="fa-stack fa-4x">
-                        <i className="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i className="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 className="service-heading">E-Commerce</h4>
-                    <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <div className="col-restrict-80">
+                        <h4 className="service-heading">Super Cool Dare Man</h4>
+                        <p className="text-muted">Description of this dare goes here in smaller text</p>
+                        <small style={{color: 'grey'}}><span className="glyphicon glyphicon-map-marker"></span>East Lansing</small>
+                        <h5 style={{margin: '20px'}}>$45.00</h5>
+                        <p className="text-center">
+                          <button type="button" className="btn btn-primary btn-lg btn-block home-button">Take</button>
+                          <button type="button" className="btn btn-default btn-lg btn-block home-button">Fund</button>
+                        </p>
+                    </div>
+                </div>
+
+                <div className="col-md-4">
+                    <div className="col-restrict-80">
+                        <h4 className="service-heading">Super Cool Dare Man</h4>
+                        <p className="text-muted">Description of this dare goes here in smaller text</p>
+                        <small style={{color: 'grey'}}><span className="glyphicon glyphicon-map-marker"></span>East Lansing</small>
+                        <h5 style={{margin: '20px'}}>$45.00</h5>
+                        <p className="text-center">
+                          <button type="button" className="btn btn-primary btn-lg btn-block home-button">Take</button>
+                          <button type="button" className="btn btn-default btn-lg btn-block home-button">Fund</button>
+                        </p>
+                    </div>
+                </div>
+
+                <div className="col-md-4">
+                    <div className="col-restrict-80">
+                        <h4 className="service-heading">Super Cool Dare Man</h4>
+                        <p className="text-muted">Description of this dare goes here in smaller text</p>
+                        <small style={{color: 'grey'}}><span className="glyphicon glyphicon-map-marker"></span>East Lansing</small>
+                        <h5 style={{margin: '20px'}}>$45.00</h5>
+                        <p className="text-center">
+                          <button type="button" className="btn btn-primary btn-lg btn-block home-button">Take</button>
+                          <button type="button" className="btn btn-default btn-lg btn-block home-button">Fund</button>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
