@@ -41,7 +41,7 @@ export default React.createClass({
                       return (  <div className="col-md-4" key={dare.id}>
                             <div className="col-restrict-80">
                                 <h4 className="service-heading">{dare.dare}</h4>
-                                <p className="text-muted">{dare.description}</p>
+                                <p className="text-muted desc">{dare.description}</p>
                                 <small style={{color: 'grey'}}><span className="glyphicon glyphicon-map-marker"></span>{dare.location}</small>
                                 <h5 style={{margin: '20px'}}>{dare.total_amount}</h5>
                                 <p className="text-center">
