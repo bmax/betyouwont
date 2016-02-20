@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, IndexRoute, hashHistory, browserHistory } from 'react-router'
+import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 import App from './src/App'
 import Login from './src/Login'
 import Home from './Components/Home'
@@ -9,7 +9,7 @@ import Dares from './Components/Dares'
 import { authenticate, logout } from './src/actions'
 
 render((
-  <Router history={hashHistory}>
+  <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Home} />
       <Route path="/login" component={Login} onEnter={authenticate}/>
