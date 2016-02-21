@@ -25,18 +25,6 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
-$('#takeModal').on('show.bs.modal', function (e) {
-  var button = $(e.relatedTarget); // Button that triggered the modal
-  var value = button.data('total_value');
-  $('#takeModalValue').html(value);
-
-})
-
-$('#fundModal').on('show.bs.modal', function (e) {
-  var button = $(e.relatedTarget); // Button that triggered the modal
-  var dare_id = button.data('dare_id');
-  var amount = $('#fundModalValue').val();
-})
 $('.btn-toggle').click(function() {
     $(this).find('.btn').toggleClass('active');
 
