@@ -48,6 +48,8 @@ export default React.createClass({
       data: data,
       success: function (data) {
         console.log("SuccesS", data);
+        me.grabDares();
+        me.setState({showModalFund: false});
     },
       error: function (data) { console.log(data.statusText); },
       dataType: 'json'

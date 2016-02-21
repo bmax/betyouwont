@@ -9,7 +9,7 @@ export default React.createClass({
   },
   render() {
     const { show, onClose, dare, fundHandler, fundHandlerChange } = this.props
-    console.log(this.state);
+
     return (
       <div>
     <Modal show={show} className="modal fade" id="fundModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
