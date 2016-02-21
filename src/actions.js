@@ -6,7 +6,8 @@ export const url = "http://betyouwontapi.herokuapp.com"
 export const routes = {
   login: url + "/login",
   signup: url + "/users/create",
-  logout: url + "/logout"
+  logout: url + "/logout",
+  createDare: url + "/dares/create"
 }
 
 export function authenticate (redirect = false, nextState, replaceState) {

@@ -1,5 +1,6 @@
 import React from 'react'
 import $ from 'jquery';
+import Modals from './Modals'
 
 const url = "http://betyouwontapi.herokuapp.com"
 const routes = {
@@ -31,7 +32,7 @@ export default React.createClass({
   render() {
     var results = this.state.dares;
     if (results.length == 0)
-        return ( <section id='bets'><h1>empty</h1></section>)
+        return ( <section id='bets'><h1>empty</h1><Modals /></section>)
     else {
            return (
             <section id="bets">
@@ -53,6 +54,7 @@ export default React.createClass({
                     })}
                     </div>
                 </div>
+                <Modals />
             </section>
         )
   }

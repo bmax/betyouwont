@@ -35,5 +35,14 @@ $('#fundModal').on('show.bs.modal', function (e) {
   var button = $(e.relatedTarget); // Button that triggered the modal
   var dare_id = button.data('dare_id');
   var amount = $('#fundModalValue').val();
-  console.log(amount)
 })
+$('.btn-toggle').click(function() {
+    $(this).find('.btn').toggleClass('active');
+
+    if ($(this).find('.btn-primary').size()>0) {
+      $(this).find('.btn').toggleClass('btn-primary');
+    }
+
+    $(this).find('.btn').toggleClass('btn-default');
+
+});

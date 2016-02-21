@@ -1,11 +1,13 @@
 import React from 'react'
 import { Router, Route, Link, browserHistory } from 'react-router'
 import { authenticate } from '../src/actions'
+import DareModal from './DareModal'
 
 export default React.createClass({
   render() {
-   var login = authenticate() ? <li><Link to='logout'>Logout</Link></li> : <li><Link to='login'>Login</Link></li> 
+   var login = authenticate() ? <li><Link to='logout'>Logout</Link></li> : <li><Link to='login'>Login</Link></li>
    return   (
+    <div>
     <nav className="navbar navbar-default navbar-fixed-top">
         <div className="container">
             <div className="navbar-header page-scroll">
@@ -26,7 +28,7 @@ export default React.createClass({
                         <a className="page-scroll" href="#bets">Dares</a>
                     </li>
                     <li>
-                        <a className="page-scroll" href="#idk">Create a Dare</a>
+                        <a href="#create" data-toggle="modal" data-target="#createModal">Create a Dare</a>
                     </li>
                     {login}
                     <li>
@@ -36,6 +38,8 @@ export default React.createClass({
             </div>
         </div>
     </nav>
+    <DareModal/>
+    </div>
     )
 
   }

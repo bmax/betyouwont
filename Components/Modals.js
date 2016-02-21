@@ -8,7 +8,7 @@ export default React.createClass({
 <div className="modal fade" id="takeModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div className="modal-dialog" role="document">
     <div className="modal-content">
-  
+
       <div className="modal-body">
         <h2>Take on this challenge?</h2>
         <br />
@@ -24,7 +24,7 @@ export default React.createClass({
 </div><div className="modal fade" id="fundModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div className="modal-dialog" role="document">
     <div className="modal-content">
-  
+
       <div className="modal-body">
         <h2>Help fund this challenge?</h2>
         <br />
@@ -43,8 +43,3 @@ export default React.createClass({
 
   }
 })
-
-
-
-
-
