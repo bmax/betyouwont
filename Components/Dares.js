@@ -2,12 +2,9 @@ import React from 'react'
 import $ from 'jquery';
 import FundModal from './FundModal'
 import TakeModal from './TakeModal'
+import cookie from 'react-cookie';
+import { authenticate, routes } from '../src/actions'
 
-
-const url = "http://betyouwontapi.herokuapp.com"
-const routes = {
-  dares: url + "/dares"
-}
 export default React.createClass({
   getInitialState() {
     this.initialState = {
@@ -16,13 +13,12 @@ export default React.createClass({
       showModalTake: false
     }
     this.state = this.initialState
-    this.grabDares();
-
     return this.state
   },
-
+  componentDidMount() {
+    this.grabDares();
+  },
   grabDares() {
-    console.log("Call API", routes.dares)
     var me = this;
     $.ajax({
         type: "GET",
@@ -30,16 +26,34 @@ export default React.createClass({
         success: function (data) {
           me.setState({dares: data});
       },
-        error: function (data) { me.setState({message: "Failure! - " + data.responseJSON['error']}); },
+        error: function (data) { console.log(data); me.setState({message: "Failure! - " + data.responseJSON['error']}); },
         dataType: 'json'
       });
   },
-  componentWillUpdate() {
-    this.grabDares();
-    return true;
+  fundHandlerChange(e) {
+    console.log("Setting fundvalue to", e.target.value);
+    this.setState({ [e.target.id]: e.target.value.trim()})
+  },
+  fundHere() {
+    var token = cookie.load('token');
+    const data = { dare_id: this.state.dareInfo.id, amount: this.state.fundModalValue }
+    var me = this;
+    $.ajax({
+      type: "POST",
+      url: routes.fundDare,
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': 'Token ' + token
+      },
+      data: data,
+      success: function (data) {
+        console.log("SuccesS", data);
+    },
+      error: function (data) { console.log(data.statusText); },
+      dataType: 'json'
+    });
   },
   showModalFund(dare) {
-    console.log("Dare:", dare);
     this.setState({showModalFund: true, dareInfo: dare});
   },
   showModalTake(dare) {
@@ -77,7 +91,7 @@ export default React.createClass({
                     }.bind(this))}
 
                     <TakeModal show={showTake} onClose={this.onClose} dare={this.state.dareInfo}/>
-                    <FundModal show={showFund} onClose={this.onClose} dare={this.state.dareInfo}/>
+                    <FundModal show={showFund} onClose={this.onClose} fundHandler={this.fundHere} fundHandlerChange={this.fundHandlerChange} dare={this.state.dareInfo}/>
 
                     </div>
                 </div>

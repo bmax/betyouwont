@@ -2,12 +2,14 @@ import fetch from 'isomorphic-fetch'
 import cookie from 'react-cookie';
 import $ from 'jquery';
 import { browserHistory } from 'react-router'
+
 export const url = "http://betyouwontapi.herokuapp.com"
 export const routes = {
   login: url + "/login",
   signup: url + "/users/create",
   logout: url + "/logout",
   createDare: url + "/dares/create",
+  dares: url + '/dares',
   fundDare: url + "/payments/create"
 }
 

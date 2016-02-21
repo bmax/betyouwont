@@ -4,7 +4,6 @@ import {Modal}from 'react-bootstrap'
 export default React.createClass({
   render() {
     const { show, onClose, dare } = this.props
-    console.log(this.props);
    return   (
 <div>
 <Modal show={show} className="modal fade" id="takeModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
