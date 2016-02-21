@@ -63,6 +63,7 @@ export default React.createClass({
     this.setState({create: this.getInitialState()})
   },
   renderForm() {
+    console.log(this.props);
     return (
     <form className="form-signin">
     {this.state.message}

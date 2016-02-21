@@ -56,7 +56,7 @@ export default React.createClass({
                     {results.map(function(dare) {
                       var boundClickTake = this.showModalTake.bind(this, dare);
                       var boundClickFund = this.showModalFund.bind(this, dare);
-                      return (  <div className="col-md-4" key={dare.id}>
+                      return (  <div className="col-md-4" style={{paddingBottom:"10px"}} key={dare.id}>
                             <div className="col-restrict-80">
                                 <h4 className="service-heading">{dare.dare}</h4>
                                 <p className="text-muted desc">{dare.description}</p>

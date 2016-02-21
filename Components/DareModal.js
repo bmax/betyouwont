@@ -1,21 +1,13 @@
 import React from 'react'
 import { authenticate, routes } from '../src/actions'
-import classNames from 'classnames';
 import $ from 'jquery';
 import cookie from 'react-cookie';
+import {Modal} from 'react-bootstrap'
+
 
 export default React.createClass({
   getInitialState() {
-    this.state = {displayDo: true, displayCreate: false}
-    return this.state
-  },
-  handleSwitch(e) {
-    if (e.target.id == 'do') {
-      this.setState({displayDo: !this.state.displayDo, displayCreate: !this.state.displayCreate})
-    }
-    if (e.target.id == 'create') {
-      this.setState({displayCreate: !this.state.displayCreate, displayDo: !this.state.displayDo })
-    }
+    return {}
   },
   createDare() {
     var token = cookie.load('token');
@@ -36,13 +28,11 @@ export default React.createClass({
     });
   },
   render() {
-    var displayDo = (this.state.displayDo ? "block" : "none");
-    var displayCreate = (this.state.displayCreate ? "block" : "none");
+    const { show, onClose, dare } = this.props
+
    return   (
 <div>
-<div className="modal" id="createModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div className="modal-dialog" role="document">
-    <div className="modal-content">
+<Modal show={show} className="modal" id="createModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
 
       <div className="modal-body"  style={{textAlign: 'center'}}>
         <h3>Create a dare</h3>
@@ -63,12 +53,10 @@ export default React.createClass({
         </div>
       </div>
       <div className="modal-footer">
-        <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" className="btn btn-default" onClick={onClose}>Close</button>
         <button type="button" className="btn btn-primary" onClick={this.createDare}>Submit</button>
       </div>
-    </div>
-  </div>
-</div>
+</Modal>
 </div>
     )
 
