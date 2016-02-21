@@ -20,6 +20,8 @@ export default React.createClass({
                         <a href="#create" onClick={this.showModal}>Create a Dare</a>
                     </li> : null
     var register = authenticate() ? null : <li><Link to='login'>Register</Link></li>
+    var bankamt=Math.floor(Math.random() * 500) + 1;
+    var bank = authenticate() ? <li style={{padding: "15px", color:"white"}}>Your Capital One account has $ {bankamt}.</li> : null
    return   (
     <div>
     <nav className="navbar navbar-default navbar-fixed-top">
@@ -35,6 +37,8 @@ export default React.createClass({
             </div>
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul className="nav navbar-nav navbar-right">
+                {bank}
+
                     <li className="hidden">
                         <a href="#page-top"></a>
                     </li>

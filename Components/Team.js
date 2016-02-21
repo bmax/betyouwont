@@ -8,7 +8,7 @@ export default React.createClass({
             <div className="row">
                 <div className="col-lg-12 text-center">
                     <h2 className="section-heading">Our Amazing Team</h2>
-                    <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 className="section-subheading text-muted">We worked hard to bring you social entertainment</h3>
                 </div>
             </div>
             <div className="row">
@@ -18,11 +18,9 @@ export default React.createClass({
                         <h4>Brandon Max</h4>
                         <p className="text-muted">Lead Designer</p>
                         <ul className="list-inline social-buttons">
-                            <li><a href="#" target="_blank"><i className="fa fa-twitter"></i></a>
+                            <li><a href="http://twitter.com/bmaxhacks" target="_blank"><i className="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#" target="_blank"><i className="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#" target="_blank"><i className="fa fa-linkedin"></i></a>
+                            <li><a href="http://linkedin.com/in/brandonmax" target="_blank"><i className="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -60,7 +58,7 @@ export default React.createClass({
             </div>
             <div className="row">
                 <div className="col-lg-8 col-lg-offset-2 text-center">
-                    <p className="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                    <p className="large text-muted">If there are any questions or concerns, specifically about buying rights to this website, feel free to contact us.</p>
                 </div>
             </div>
         </div>
