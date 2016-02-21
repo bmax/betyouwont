@@ -29,6 +29,7 @@ $('#takeModal').on('show.bs.modal', function (e) {
   var button = $(e.relatedTarget); // Button that triggered the modal
   var value = button.data('total_value');
   $('#takeModalValue').html(value);
+
 })
 
 $('#fundModal').on('show.bs.modal', function (e) {
