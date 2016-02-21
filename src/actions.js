@@ -7,7 +7,8 @@ export const routes = {
   login: url + "/login",
   signup: url + "/users/create",
   logout: url + "/logout",
-  createDare: url + "/dares/create"
+  createDare: url + "/dares/create",
+  fundDare: url + "/payments/create"
 }
 
 export function authenticate (redirect = false, nextState, replaceState) {

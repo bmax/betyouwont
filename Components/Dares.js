@@ -17,8 +17,10 @@ export default React.createClass({
     }
     this.state = this.initialState
     this.grabDares();
+
     return this.state
   },
+
   grabDares() {
     console.log("Call API", routes.dares)
     var me = this;
@@ -31,6 +33,10 @@ export default React.createClass({
         error: function (data) { me.setState({message: "Failure! - " + data.responseJSON['error']}); },
         dataType: 'json'
       });
+  },
+  componentWillUpdate() {
+    this.grabDares();
+    return true;
   },
   showModalFund(dare) {
     console.log("Dare:", dare);
